@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio Projetos by Maria Victoria Miranda</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cyberDark: '#070913',
+            cyberCard: '#0f1426',
+            cyberCardBorder: '#1e284a',
+            neonPurple: '#a855f7',
+            neonPurpleGlow: '#c084fc',
+            neonBlue: '#38bdf8',
+            neonBlueGlow: '#0284c7',
+            accentCyan: '#06b6d4',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['Fira Code', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom cybertech accents and glow utilities */
+    body {
+      background-color: #070913;
+      color: #e2e8f0;
+      background-image: 
+        radial-gradient(circle at 15% 20%, rgba(168, 85, 247, 0.12) 0%, transparent 40%),
+        radial-gradient(circle at 85% 60%, rgba(56, 189, 248, 0.10) 0%, transparent 45%),
+        radial-gradient(circle at 50% 90%, rgba(147, 51, 234, 0.08) 0%, transparent 35%);
+      background-attachment: fixed;
+    }
+    
+    .grid-pattern {
+      background-size: 32px 32px;
+      background-image: 
+        linear-gradient(to right, rgba(56, 189, 248, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(168, 85, 247, 0.04) 1px, transparent 1px);
+    }
+
+    .cyber-glow-purple {
+      box-shadow: 0 0 25px -5px rgba(168, 85, 247, 0.35);
+    }
+    
+    .cyber-glow-blue {
+      box-shadow: 0 0 25px -5px rgba(56, 189, 248, 0.35);
+    }
+
+    .border-gradient {
+      border-image: linear-gradient(135deg, #a855f7, #38bdf8) 1;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #0f1426;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #38bdf8;
+      border-radius: 9999px;
+    }
+  </style>
+</head>
+<body class="min-h-screen font-sans antialiased selection:bg-neonPurple selection:text-white flex flex-col justify-between grid-pattern">
+
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-cyberDark/80 border-b border-cyberCardBorder/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-lg bg-gradient-to-tr from-neonPurple to-neonBlue flex items-center justify-center p-[2px] shadow-lg shadow-neonPurple/20">
+          <div class="w-full h-full bg-cyberDark rounded-[6px] flex items-center justify-center">
+            <span class="font-mono font-bold text-transparent bg-clip-text bg-gradient-to-r from-neonBlue to-neonPurple">MV</span>
+          </div>
+        </div>
+        <div>
+          <span class="font-mono font-bold text-sm sm:text-base tracking-wider text-slate-100 uppercase">Maria Victoria Miranda</span>
+          <span class="block text-xs font-mono text-neonBlue">Data Systems & AI Engineer</span>
+        </div>
+      </div>
+
+      <nav class="flex items-center space-x-4 sm:space-x-6 text-xs sm:text-sm font-mono">
+        <a href="#sobre" class="text-slate-300 hover:text-neonBlue transition-colors">/sobre</a>
+        <a href="#pocs" class="text-slate-300 hover:text-neonPurple transition-colors">/pocs</a>
+        <a href="#arquitetura" class="text-slate-300 hover:text-accentCyan transition-colors">/arquitetura</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex-1 w-full space-y-20">
+    <section class="text-center sm:text-left pt-6 pb-10 border-b border-cyberCardBorder/60">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-cyberCard border border-neonPurple/40 text-xs font-mono text-neonPurple mb-6 shadow-sm">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>Embaixadora Estudantil Google • 800+ Pontos • UFABC</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6">
+        Portfólio Projetos <br class="hidden sm:block"/>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-neonPurple via-neonBlue to-accentCyan">
+          by Maria Victoria Miranda
+        </span>
+      </h1>
+
+      <p class="max-w-3xl text-slate-300 text-sm sm:text-base lg:text-lg leading-relaxed mb-8">
+        Provas de Conceito (PoCs) e arquiteturas de Inteligência Artificial para dados intensivos. 
+        Implementação de <strong>agentes determinísticos</strong> com rigor regulatório (COAF/BACEN), 
+        quebra de silos de dados em tempo real e análise forense de vínculos através de grafos.
+      </p>
+
+      <div class="flex flex-wrap items-center gap-4 text-xs font-mono">
+        <div class="px-4 py-2 rounded-lg bg-cyberCard border border-cyberCardBorder text-slate-300 flex items-center gap-2">
+          <i class="fa-solid fa-shield-halved text-neonPurple"></i>
+          <span>Modelos Determinísticos</span>
+        </div>
+        <div class="px-4 py-2 rounded-lg bg-cyberCard border border-cyberCardBorder text-slate-300 flex items-center gap-2">
+          <i class="fa-solid fa-diagram-project text-neonBlue"></i>
+          <span>Grafos & Vínculos</span>
+        </div>
+        <div class="px-4 py-2 rounded-lg bg-cyberCard border border-cyberCardBorder text-slate-300 flex items-center gap-2">
+          <i class="fa-solid fa-code text-accentCyan"></i>
+          <span>JSON Schema Enforce</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="pocs" class="space-y-10">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+        <div>
+          <p class="text-xs font-mono uppercase tracking-widest text-neonPurple">Provas de Conceito • Hands-on Labs</p>
+          <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-wide">Agentes de IA & Engenharia de Dados</h2>
+        </div>
+        <div class="text-xs font-mono text-slate-400">
+          <i class="fa-solid fa-lock text-neonBlue mr-1"></i> Arquitetura Black-Box com validação estruturada
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <!-- CARD 1 -->
+        <article class="flex flex-col justify-between bg-cyberCard rounded-2xl border border-cyberCardBorder hover:border-neonPurple transition-all duration-300 cyber-glow-purple p-6 group">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-1 rounded bg-neonPurple/20 border border-neonPurple/40 text-[11px] font-mono text-neonPurpleGlow uppercase">PoC 01 • Risco & PLD</span>
+              <span class="text-xs font-mono text-slate-400"><i class="fa-solid fa-bolt text-amber-400"></i> Determinístico</span>
+            </div>
+
+            <h3 class="text-xl font-bold text-white group-hover:text-neonPurpleGlow transition-colors">
+              SentinelRisk: Triagem Regulatória & Smurfing
+            </h3>
+
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+              Agente especializado no enquadramento de transações bancárias sob as diretrizes do COAF/BACEN. Identifica fracionamento (smurfing), incompatibilidade de renda declarada e operações atípicas de valor elevado.
+            </p>
+
+            <div class="p-3 bg-cyberDark/90 rounded-xl border border-cyberCardBorder/80 font-mono text-[11px] text-slate-400 space-y-1">
+              <div class="text-neonPurple flex items-center gap-1 font-semibold">
+                <i class="fa-solid fa-microchip"></i> Regras de Corte Ativas:
+              </div>
+              <ul class="list-disc list-inside space-y-0.5 text-slate-300">
+                <li>R1: Operações únicas &ge; R$ 50.000</li>
+                <li>R2: Fracionamento entre R$ 9.000 e R$ 9.999</li>
+                <li>R3: Transações superiores a 3x a renda</li>
+              </ul>
+            </div>
+
+            <div class="flex flex-wrap gap-1.5 pt-2">
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-cyberDark text-neonBlue border border-neonBlue/30">COAF</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-cyberDark text-neonPurple border border-neonPurple/30">JSON Schema</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-cyberDark text-accentCyan border border-accentCyan/30">Auditoria</span>
+            </div>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-cyberCardBorder/80">
+            <a href="https://gemini.google.com/gem-labs/16ssjrZ4FQnP9t5i434mH8d8jVrkgyi1D" target="_blank" rel="noopener noreferrer" 
+               class="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-gradient-to-r from-neonPurple to-indigo-600 hover:from-neonPurpleGlow hover:to-indigo-500 text-white font-mono text-xs font-semibold tracking-wide transition-all shadow-md shadow-neonPurple/20">
+              <span>Acessar Agente Gemini</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- CARD 2 -->
+        <article class="flex flex-col justify-between bg-cyberCard rounded-2xl border border-cyberCardBorder hover:border-neonBlue transition-all duration-300 cyber-glow-blue p-6 group">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-1 rounded bg-neonBlue/20 border border-neonBlue/40 text-[11px] font-mono text-neonBlue uppercase">PoC 02 • Observabilidade</span>
+              <span class="text-xs font-mono text-slate-400"><i class="fa-solid fa-server text-neonBlue"></i> Resiliência</span>
+            </div>
+
+            <h3 class="text-xl font-bold text-white group-hover:text-neonBlue transition-colors">
+              OpsSentinel: Diagnóstico de Falha & Latência p99
+            </h3>
+
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+              Analisador inteligente de incidentes em microsserviços distribuídos. Extrai métricas de severidade, correlaciona estouros de pool de conexões (DB Pool Exhaustion) e diagnostica sintomas de <em>head-of-line blocking</em>.
+            </p>
+
+            <div class="p-3 bg-cyberDark/90 rounded-xl border border-cyberCardBorder/80 font-mono text-[11px] text-slate-400 space-y-1">
+              <div class="text-neonBlue flex items-center gap-1 font-semibold">
+                <i class="fa-solid fa-chart-line"></i> Métricas & Diagnósticos:
+              </div>
+              <ul class="list-disc list-inside space-y-0.5 text-slate-300">
+                <li>Isolamento de causa-raiz vs. cascata</li>
+                <li>Estimativa de impacto em percentis de cauda (p99)</li>
+                <li>Extração de tempos de resposta e violações de SLA</li>
+              </ul>
+            </div>
+
+            <div class="flex flex-wrap gap-1.5 pt-2">
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-cyberDark text-neonBlue border border-neonBlue/30">p99 Latency</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-cyberDark text-neonPurple border border-neonPurple/30">Head-of-Line</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-cyberDark text-accentCyan border border-accentCyan/30">SRE Bancário</span>
+            </div>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-cyberCardBorder/80">
+            <a href="https://gemini.google.com/gem-labs/1T-tmV-MFUAdyBHP18yCRU7B7RRKt-YVh" target="_blank" rel="noopener noreferrer" 
+               class="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-gradient-to-r from-neonBlue to-sky-600 hover:from-sky-400 hover:to-sky-500 text-slate-950 font-mono text-xs font-bold tracking-wide transition-all shadow-md shadow-neonBlue/20">
+              <span>Acessar Agente Gemini</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- CARD 3 -->
+        <article class="flex flex-col justify-between bg-cyberCard rounded-2xl border border-cyberCardBorder hover:border-accentCyan transition-all duration-300 p-6 group hover:shadow-[0_0_25px_-5px_rgba(6,182,212,0.35)]">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-1 rounded bg-accentCyan/20 border border-accentCyan/40 text-[11px] font-mono text-accentCyan uppercase">PoC 03 • Grafos Forenses</span>
+              <span class="text-xs font-mono text-slate-400"><i class="fa-solid fa-circle-nodes text-accentCyan"></i> Vínculos N:N</span>
+            </div>
+
+            <h3 class="text-xl font-bold text-white group-hover:text-accentCyan transition-colors">
+              GraphSleuth: Detecção de Fraude em Anel (Ring Fraud)
+            </h3>
+
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+              Mapeamento de relações complexas e saltos relacionais arbitrários. Descobre triangulações financeiras opacas, empresas de fachada e nós de concentração (ex: telefones e IPs compartilhados por múltiplos titulares).
+            </p>
+
+            <div class="p-3 bg-cyberDark/90 rounded-xl border border-cyberCardBorder/80 font-mono text-[11px] text-slate-400 space-y-1">
+              <div class="text-accentCyan flex items-center gap-1 font-semibold">
+                <i class="fa-solid fa-sitemap"></i> Padrões Rastreados:
+              </div>
+              <ul class="list-disc list-inside space-y-0.5 text-slate-300">
+                <li>Travessia de arestas de múltiplos graus</li>
+                <li>Compartilhamento oculto de atributos sensíveis</li>
+                <li>Fluxos financeiros de retorno circular</li>
+              </ul>
+            </div>
+
+            <div class="flex flex-wrap gap-1.5 pt-2">
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-cyberDark text-neonBlue border border-neonBlue/30">Property Graphs</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-cyberDark text-neonPurple border border-neonPurple/30">Ring Fraud</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-cyberDark text-accentCyan border border-accentCyan/30">Cypher / N:N</span>
+            </div>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-cyberCardBorder/80">
+            <a href="https://gemini.google.com/gem-labs/11NKfhL-N7le0jfupi1LR3bx-eO1v-_A-" target="_blank" rel="noopener noreferrer" 
+               class="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-gradient-to-r from-accentCyan to-teal-500 hover:from-cyan-300 hover:to-teal-400 text-slate-950 font-mono text-xs font-bold tracking-wide transition-all shadow-md shadow-accentCyan/20">
+              <span>Acessar Agente Gemini</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="arquitetura" class="space-y-8 pt-8 border-t border-cyberCardBorder/70">
+      <div class="max-w-2xl">
+        <p class="text-xs font-mono uppercase tracking-widest text-neonBlue">Fundamentos de Engenharia</p>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-wide">Arquitetura de Dados & Inteligência Artificial</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 font-mono text-xs">
+        <div class="p-6 rounded-2xl bg-cyberCard border border-cyberCardBorder space-y-3">
+          <div class="flex items-center gap-2 text-neonPurple text-sm font-bold">
+            <i class="fa-solid fa-terminal"></i>
+            <h3>Determinismo vs. Probabilismo</h3>
+          </div>
+          <p class="text-slate-300 font-sans text-sm leading-relaxed">
+            LLMs operam sob distribuição estatística de tokens (probabilístico). Em sistemas financeiros, a camada analítica e regulatória precisa ser 100% determinística. Os agentes desenvolvidos atuam como um wrapper interpretativo e conversacional (Kira / Citibank Model), delegando a checagem a regras fechadas e schema restrito.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-cyberCard border border-cyberCardBorder space-y-3">
+          <div class="flex items-center gap-2 text-neonBlue text-sm font-bold">
+            <i class="fa-solid fa-database"></i>
+            <h3>Quebra de Silos de Dados</h3>
+          </div>
+          <p class="text-slate-300 font-sans text-sm leading-relaxed">
+            Superação da dependência de relatórios em lote (batch pós-fato) através da ingestão em tempo real. A convergência entre grafos, bases vetoriais e logs transacionais permite mitigar fraudes e anomalias de risco no momento exato em que ocorrem.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="p-8 rounded-2xl bg-gradient-to-r from-neonPurple/15 via-cyberCard to-neonBlue/15 border border-cyberCardBorder flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="space-y-2 text-center md:text-left">
+        <h3 class="text-lg font-bold text-white font-mono">Precisa de dados sintéticos para testes locais?</h3>
+        <p class="text-slate-400 text-xs sm:text-sm max-w-xl">
+          Copie amostras de lotes formatados (CSV/JSON) para alimentar os agentes nos laboratórios práticos.
+        </p>
+      </div>
+      <button onclick="copiarExemplo()" class="px-5 py-2.5 rounded-xl bg-cyberCard hover:bg-cyberCardBorder border border-neonPurple/50 text-white font-mono text-xs flex items-center gap-2 transition-all shadow-sm">
+        <i class="fa-regular fa-copy text-neonPurple"></i>
+        <span id="copyBtnText">Copiar Amostra CSV</span>
+      </button>
+    </section>
+  </main>
+
+  <footer class="border-t border-cyberCardBorder/60 bg-cyberDark py-8 text-center text-xs font-mono text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 space-y-2">
+      <p>Portfólio de Projetos &bull; Desenvolvido por <span class="text-slate-200">Maria Victoria Miranda</span></p>
+      <p class="text-slate-400">Inspirado nos conceitos de <em>Designing Data-Intensive Applications</em> (Martin Kleppmann)</p>
+    </div>
+  </footer>
+
+  <script>
+    // Copy sample synthetic dataset to clipboard
+    function copiarExemplo() {
+      const csvData = `id_transacao,cpf_cliente,renda_mensal,valor_transacao,tipo_transacao,canal
+TX-9011,123.456.789-00,4500.00,350.00,PIX_TRANSFERENCIA,APP_MOBILE
+TX-9012,234.567.890-11,12000.00,75000.00,TED_MESMA_TITULARIDADE,INTERNET_BANKING
+TX-9013,345.678.901-22,3000.00,9850.00,DEPOSITO_ESPECIE,TERMINAL_AUTOATENDIMENTO
+TX-9014,345.678.901-22,3000.00,9900.00,DEPOSITO_ESPECIE,TERMINAL_AUTOATENDIMENTO
+TX-9015,456.789.012-33,5000.00,22000.00,PIX_RECEBIMENTO,APP_MOBILE`;
+
+      const el = document.createElement('textarea');
+      el.value = csvData;
+      document.body.appendChild(el);
+      el.select();
+      document.execCommand('copy');
+      document.body.removeChild(el);
+
+      const btn = document.getElementById('copyBtnText');
+      const originalText = btn.innerText;
+      btn.innerText = 'Copiado com Sucesso!';
+      setTimeout(() => {
+        btn.innerText = originalText;
+      }, 2500);
+    }
+  </script>
+</body>
+</html>
